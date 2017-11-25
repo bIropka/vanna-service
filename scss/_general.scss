@@ -1,0 +1,120 @@
+/*********************************************
+*********** general
+**********************************************/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+a,
+button {
+  transition: .4s;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+.slider-wrap .slide:hover,
+.slider-wrap .slide:active,
+.slider-wrap .slide:focus,
+a:hover,
+a:active,
+a:focus,
+button:hover,
+button:active,
+button:focus,
+.noUi-horizontal .noUi-handle:hover,
+.noUi-horizontal .noUi-handle:active,
+.noUi-horizontal .noUi-handle:focus {
+  outline: none;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  min-width: 320px;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.wrapper-inner {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 42px;
+  text-align: center;
+  font-weight: 500;
+}
+
+h2 {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 37px;
+  font-weight: 400;
+  margin: 0 0 50px;
+
+  span {
+    display: inline-block;
+    padding: 0 20px;
+    position: relative;
+    color: inherit;
+
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 2px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      left: -20px;
+    }
+
+    &:after {
+      left: auto;
+      right: -20px;
+    }
+
+  }
+
+}
+
+p {
+  font-size: 15px;
+  line-height: 26px;
+  margin: 25px 0;
+}
+
+section {
+  display: block;
+  padding: 60px 0;
+}
