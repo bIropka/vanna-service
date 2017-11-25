@@ -1,2 +1,32 @@
 header(role='banner')
-    div(class='wrapper-inner')
+    div(class='header-fixed')
+        div(class='wrapper-inner')
+            nav
+                ul
+                    li
+                        a(href='#' class='active') Начало
+                    li
+                        a(href='#') О компании
+                    li
+                        a(href='#') Услуги
+                    li
+                        a(href='#') Портфолио
+                    li
+                        a(href='#') Блог
+                    li
+                        a(href='#') Отзывы
+                    li
+                        a(href='#') Контакты
+            a(href='#calculator' class='to-calculator')
+                span(class='to-calculator-icon')
+                    img(src='images/icon-phone.png' alt='calculator')
+                span(class='to-calculator-text') Калькулятор ремонта
+    div(class='header-content')
+        div(class='wrapper-inner')
+            a(href='index.html' class='logo')
+                img(src='images/logo.png' alt='Ванна-сервис')
+            div(class='header-content-info') Ремонт ванных комнат «под ключ». Широкий спектр работ, от демонтажа и вывоза мусора до финишной отделки!
+            a(href='tel:+74957572557' class='link-phone')
+                != '<span>+7 (495)</span> 757 25 57'
+            button(class='to-callback')
+                span Заказать звонок

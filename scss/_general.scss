@@ -18,12 +18,8 @@ button {
 }
 
 a {
+  color: #000;
   text-decoration: none;
-
-  &:hover {
-    text-decoration: none;
-  }
-
 }
 
 img {
@@ -38,6 +34,102 @@ button {
   border: none;
 }
 
+input:hover,
+input:active,
+input:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+input::-webkit-input-placeholder {
+  font-weight: 300;
+  font-size: 20px;
+  color: #000;
+  opacity: 1;
+}
+
+input::-moz-placeholder {
+  font-weight: 300;
+  font-size: 20px;
+  color: #000;
+  opacity: 1;
+}
+
+input:-moz-placeholder {
+  font-weight: 300;
+  font-size: 20px;
+  color: #000;
+  opacity: 1;
+}
+
+input:-ms-input-placeholder {
+  font-weight: 300;
+  font-size: 20px;
+  color: #000;
+  opacity: 1;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+input:focus::-moz-placeholder {
+  color: transparent;
+}
+
+input:focus:-moz-placeholder {
+  color: transparent;
+}
+
+input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+label {
+  display: block;
+  width: 100%;
+  position: relative;
+
+  .fa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    line-height: 1;
+    height: 26px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 20px;
+    margin: auto;
+  }
+
+  input:not([type='checkbox']),
+  input:not([type='radio']) {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border: none;
+    padding: 0 25px;
+
+    &:focus + .fa {
+      display: none;
+    }
+
+  }
+
+}
+
+input:not([type=checkbox]):not([type=radio]),
+textarea,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 .slider-wrap .slide:hover,
 .slider-wrap .slide:active,
 .slider-wrap .slide:focus,
@@ -46,19 +138,23 @@ a:active,
 a:focus,
 button:hover,
 button:active,
-button:focus,
-.noUi-horizontal .noUi-handle:hover,
-.noUi-horizontal .noUi-handle:active,
-.noUi-horizontal .noUi-handle:focus {
+button:focus {
   outline: none;
 }
 
 .wrapper {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   min-height: 100vh;
   min-width: 320px;
   overflow: hidden;
   opacity: 0;
+}
+
+main {
+  flex-grow: 1;
+  background: $color-light;
 }
 
 .wrapper-inner {
@@ -69,54 +165,67 @@ button:focus,
 }
 
 h1 {
-  font-size: 42px;
-  text-align: center;
+  font-size: 27px;
+  line-height: 32px;
   font-weight: 500;
+  color: $color-blue;
 }
 
 h2 {
-  display: block;
-  width: 100%;
-  text-align: center;
-  font-size: 37px;
-  font-weight: 400;
-  margin: 0 0 50px;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 500;
+  color: $color-blue;
+}
 
-  span {
-    display: inline-block;
-    padding: 0 20px;
-    position: relative;
-    color: inherit;
-
-    &:before,
-    &:after {
-      content: '';
-      display: block;
-      width: 20px;
-      height: 2px;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      margin: auto;
-      left: -20px;
-    }
-
-    &:after {
-      left: auto;
-      right: -20px;
-    }
-
-  }
-
+h3 {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+  color: $color-blue;
 }
 
 p {
-  font-size: 15px;
-  line-height: 26px;
+  font-size: 17px;
+  line-height: 30px;
   margin: 25px 0;
 }
 
 section {
   display: block;
   padding: 60px 0;
+}
+
+.button-texture {
+  display: flex;
+  height: 50px;
+  padding: 0 45px;
+  flex-shrink: 0;
+  background: url(../images/background-button.jpg) no-repeat center center;
+
+  span {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+}
+
+.form-note {
+  font-weight: 300;
+  font-size: 15px;
+
+  a {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+  }
+
 }

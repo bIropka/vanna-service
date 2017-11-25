@@ -1,0 +1,61 @@
+/*********************************************
+*********** form-order
+**********************************************/
+
+.form-order {
+  background: url(../images/background-green-form.jpg) no-repeat center center;
+  background-size: cover;
+  padding: 40px 0;
+  text-align: center;
+
+  h2 {
+    font-size: 35px;
+    color: #fff;
+    font-weight: 300;
+
+    strong {
+      font-size: inherit;
+      color: inherit;
+      font-weight: 500;
+    }
+
+  }
+
+  form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0 20px;
+
+    label {
+      margin: 0 30px 0 0;
+
+      input {
+        padding: 0 50px 0 25px;
+      }
+
+    }
+
+  }
+
+  .form-note {
+    color: #fff;
+  }
+
+}
+
+@media(max-width: 1199px) {
+
+}
+
+@media(max-width: 991px) {
+
+}
+
+@media(max-width: 767px) {
+
+}
+
+@media(max-width: 575px) {
+
+}
