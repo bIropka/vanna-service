@@ -3,6 +3,42 @@
 **********************************************/
 
 .breadcrumbs {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15px 0 10px;
+  border-bottom: 1px solid #bfbfbf;
+
+  li {
+    display: block;
+    font-size: 14px;
+    color: #000;
+    margin: 5px 0;
+
+    &:after {
+      content: '/';
+      margin: 0 5px;
+      color: #566061;
+      font-size: 14px;
+      line-height: 1;
+    }
+
+    &:last-child:after {
+      display: none;
+    }
+
+    a {
+      font-size: 14px;
+      color: #566061;
+
+      &:hover {
+        color: #000;
+      }
+
+    }
+
+  }
 
 }
 

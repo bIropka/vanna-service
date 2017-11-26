@@ -12,11 +12,13 @@
     font-size: 35px;
     color: #fff;
     font-weight: 300;
+    line-height: 1;
 
     strong {
       font-size: inherit;
       color: inherit;
       font-weight: 500;
+      line-height: 1;
     }
 
   }
@@ -44,18 +46,47 @@
 
 }
 
-@media(max-width: 1199px) {
-
-}
-
 @media(max-width: 991px) {
 
 }
 
 @media(max-width: 767px) {
 
+  .form-order {
+
+    form {
+      flex-wrap: wrap;
+      margin: 20px 0;
+
+      label {
+        width: 100%;
+        margin: 0 0 15px;
+
+        input {
+          padding: 0 50px 0 25px;
+        }
+
+      }
+
+    }
+
+    .button-texture {
+      margin: 0 auto;
+    }
+
+  }
+
 }
 
 @media(max-width: 575px) {
+
+  .form-order {
+    padding: 25px 0;
+
+    h2 {
+      font-size: 27px;
+    }
+
+  }
 
 }

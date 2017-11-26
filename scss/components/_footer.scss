@@ -58,3 +58,64 @@ footer[role='contentinfo'] {
   }
 
 }
+
+@media(max-width: 1199px) {
+
+  footer[role='contentinfo'] {
+    padding: 45px 0;
+    flex-grow: 0;
+
+    .wrapper-inner {
+      flex-wrap: wrap;
+    }
+
+  }
+
+  .footer-company-info {
+    width: 100%;
+    order: 2;
+    text-align: center;
+
+    .logo {
+      margin: 25px auto 0;
+    }
+
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    order: 1;
+
+    .social-links {
+      margin: 20px;
+    }
+
+    nav {
+
+      ul {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        li {
+          margin: 10px;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+@media(max-width: 575px) {
+
+  footer[role='contentinfo'] {
+    padding: 25px 0;
+  }
+
+}
