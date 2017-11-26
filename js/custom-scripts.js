@@ -90,4 +90,18 @@ $(window).ready(function() {
 
     /* -------------- */
 
+    /* rates */
+
+    $('.rates-item-tab-control').click(function() {
+        if(!$(this).hasClass('active')) {
+            var current = $(this).index();
+            $(this).siblings().removeClass('active');
+            $(this).addClass('active');
+            $(this).parents('.rates-item').find('.rates-single-rate.active').removeClass('active');
+            $(this).parents('.rates-item').find('.rates-single-rate').eq(current).addClass('active');
+        }
+    });
+
+    /* ----- */
+
 });
