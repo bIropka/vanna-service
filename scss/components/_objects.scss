@@ -1,0 +1,293 @@
+/*********************************************
+*********** objects
+**********************************************/
+
+.objects {
+  background: url(../images/background-blue-texture.jpg) center center;
+  padding: 50px 0 70px;
+
+  h2 {
+    color: #fff;
+  }
+
+  .sub-title {
+    color: #6fd5ff;
+    margin: 10px 0 20px;
+  }
+
+  .slider-wrap {
+    background: #fff;
+    padding: 20px;
+  }
+
+}
+
+.object-item {
+  display: flex!important;
+  justify-content: space-between;
+  align-content: flex-start;
+  position: relative;
+  user-select: none;
+}
+
+.to-object-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  padding: 0;
+  font-size: 17px;
+  text-transform: uppercase;
+  color: #ffff;
+  font-weight: 500;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 165px;
+  margin: auto;
+  box-shadow: 0 0 0 20px rgba(0, 0, 0, .57);
+  z-index: 2;
+
+  &:hover {
+    box-shadow: 0 0 0 20px rgba(31, 126, 165, .75);
+  }
+
+}
+
+.object-before,
+.object-after {
+  width: calc(50% - 10px);
+  position: relative;
+}
+
+.object-marker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 50px;
+  position: absolute;
+  top: 165px;
+  z-index: 1;
+
+  img {
+    width: auto;
+    margin: 0;
+  }
+
+}
+
+.object-before .object-marker {
+  background: #c81212;
+  left: 195px;
+}
+
+.object-after .object-marker {
+  background: $color-green;
+  right: 195px;
+}
+
+.object-marker-text {
+  font-size: 17px;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 0 0 10px;
+}
+
+.object-image-container {
+  width: 100%;
+  height: 355px;
+  margin: 0 0 20px;
+  overflow: hidden;
+}
+
+.object-image-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.object-image {
+  width: calc(33.33333% - 13px);
+  height: 120px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .37);
+    box-shadow: inset 0 0 0 0 #fff;
+    transition: .4s;
+  }
+
+  img {
+    height: 100%;
+    width: auto;
+  }
+
+  &.active {
+    border: 1px solid $color-green;
+    cursor: default;
+
+    &:after {
+      background: rgba(0, 0, 0, 0);
+      box-shadow: inset 0 0 0 3px #fff;
+    }
+
+  }
+
+}
+
+.objects-controls {
+  top: 125px;
+}
+
+@media(max-width: 1260px) {
+
+  .objects {
+
+    .slider-wrap {
+      width: 595px;
+      margin: 0 auto;
+    }
+
+    .object-item {
+      display: block!important;
+    }
+
+  }
+
+  .object-before,
+  .object-after {
+    width: 100%;
+    position: relative;
+  }
+
+  .to-object-view {
+    position: static;
+    margin: 50px auto;
+    box-shadow: none;
+
+    &:hover {
+      box-shadow: none;
+    }
+
+  }
+
+  .object-before .object-marker,
+  .object-after .object-marker {
+    top: 25px;
+    left: 25px;
+    right: auto;
+    bottom: auto;
+  }
+
+  .objects-controls {
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+}
+
+@media(max-width: 767px) {
+
+  .objects-prev,
+  .objects-prev:hover {
+
+    &:before {
+      right: 0;
+    }
+
+  }
+
+  .objects-next,
+  .objects-next:hover {
+
+    &:before {
+      left: 0;
+    }
+
+  }
+
+}
+
+@media(max-width: 640px) {
+
+  .objects {
+    padding: 25px 0 40px;
+
+    .sub-title {
+      margin: 5px 0 15px;
+    }
+
+    .slider-wrap {
+      width: 290px;
+      padding: 5px;
+    }
+
+  }
+
+  .object-image-container {
+    height: 180px;
+    margin: 0 0 5px;
+  }
+
+  .object-before .object-marker,
+  .object-after .object-marker {
+    width: 100px;
+    height: 40px;
+    top: 10px;
+    left: 10px;
+
+    img {
+      width: 20px;
+    }
+
+  }
+
+  .object-marker-text {
+    font-size: 13px;
+    margin: 0 0 0 5px;
+  }
+
+  .object-image {
+    width: calc(33.33333% - 4px);
+    height: 63px;
+
+    &.active {
+      border: 1px solid $color-green;
+      cursor: default;
+
+      &:after {
+        box-shadow: inset 0 0 0 1px #fff;
+      }
+
+    }
+
+  }
+
+  .objects-controls {
+    width: 50px;
+    height: 60px;
+
+    &:before {
+      width: 50px;
+      height: 23px;
+      background-size: contain;
+    }
+
+  }
+
+  .to-object-view {
+    width: 150px;
+    font-size: 12px;
+    margin: 25px auto;
+  }
+
+}
