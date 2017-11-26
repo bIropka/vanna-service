@@ -1,0 +1,16 @@
+div(class='form-order')
+    div(class='wrapper-inner')
+        h2
+            != 'Оставить заявку на <strong>бесплатный расчет стоимости</strong>'
+        div(class='form-sub-title') Это бесплатно и ни к чему вас не обязывает
+        form(action='#')
+            label
+                input(type='text' placeholder='Ваше имя')
+                i(class='fa fa-user')
+            label
+                input(type='tel' placeholder='Ваш телефон')
+                i(class='fa fa-phone')
+            button(type='submit' class='button-texture')
+                span Оставить заявку
+        div(class='form-note')
+            != 'Нажимая на кнопку, вы подтверждаете своё согласие с обработкой персональных данных и <a href="#">политикой конфиденциальности</a>'
