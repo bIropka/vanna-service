@@ -104,4 +104,29 @@ $(window).ready(function() {
 
     /* ----- */
 
+    /* steps */
+
+    $('.slider-steps').slick({
+        slidesToShow: 3,
+        appendArrows: '.steps-controls',
+        prevArrow: '.steps-prev',
+        nextArrow: '.steps-next',
+        responsive: [
+            {
+                breakpoint: 981,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+
+    /* ----- */
+
 });
