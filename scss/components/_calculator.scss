@@ -1,0 +1,140 @@
+/*********************************************
+*********** calculator
+**********************************************/
+
+.calculator {
+  width: 100%;
+  background: url(../images/background-green-form.jpg) no-repeat center center;
+  background-size: cover;
+  padding: 40px 0;
+}
+
+.calculator-result {
+  text-align: center;
+}
+
+.form-calculator {
+  display: block;
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  .label-text {
+    display: block;
+    font-size: 17px;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0 0 15px;
+  }
+
+  fieldset {
+    margin: 0 0 40px;
+    float: left;
+  }
+
+  .calculator-square {
+    width: 295px;
+  }
+
+  .calculator-object-type {
+    width: 595px;
+    margin-left: 30px;
+
+    .custom-select .current-value span {
+      max-width: 490px;
+    }
+
+  }
+
+  .calculator-cost-category {
+    width: 480px;
+
+    .custom-select .current-value span {
+      max-width: 380px;
+    }
+
+  }
+
+  .calculator-time,
+  .calculator-cost {
+    width: 190px;
+    margin-left: 30px;
+  }
+
+  .form-note {
+    color: #fff;
+    text-align: center;
+  }
+
+}
+
+.calculator-result {
+  width: 100%;
+
+  .button-texture {
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 5px;
+  }
+
+  .calculator-result-value {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 35px;
+    font-weight: 500;
+    color: #fff;
+    margin: 5px;
+  }
+
+}
+
+@media(max-width: 991px) {
+
+  .form-calculator {
+
+    fieldset {
+      margin: 0 0 25px;
+      float: none;
+    }
+
+    .calculator-square,
+    .calculator-object-type,
+    .calculator-cost-category,
+    .calculator-time,
+    .calculator-cost {
+      width: 100%;
+      margin-left: 0;
+    }
+
+    .custom-select .current-value span,
+    .custom-select .current-value span {
+      max-width: 100%!important;
+    }
+
+  }
+
+}
+
+@media(max-width: 767px) {
+
+  .form-calculator {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+}
+
+@media(max-width: 575px) {
+
+}

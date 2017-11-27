@@ -1,0 +1,43 @@
+div(class='calculator' id='calculator')
+    div(class='wrapper-inner')
+        form(action='#' class='form-calculator')
+            fieldset(class='calculator-square')
+                label
+                    span(class='label-text') Метраж помещения
+                    input(type='text' placeholder='Укажите метраж')
+            fieldset(class='calculator-object-type')
+                div(class='label-text') Тип санузла
+                div(class='custom-select')
+                    div(class='current-value')
+                        span Совмещенный
+                    ul
+                        li(class='active') Совмещенный
+                        li Вариант выбора с длинным названием
+                        li Вариант выбора
+                        li Вариант выбора
+                    input(type='text')
+            fieldset(class='calculator-cost-category')
+                div(class='label-text') Ценовая категория
+                div(class='custom-select')
+                    div(class='current-value')
+                        span Премиум
+                    ul
+                        li(class='active') Премиум
+                        li Вариант выбора с очень, ну просто очень длинным названием
+                        li Вариант выбора
+                        li Вариант выбора
+                    input(type='text')
+            fieldset(class='calculator-time')
+                label
+                    span(class='label-text') Срок (дней)
+                    input(type='text' placeholder='7')
+            fieldset(class='calculator-cost')
+                label
+                    span(class='label-text') Цена (от, руб.)
+                    input(type='text' placeholder='1000')
+            fieldset(class='calculator-result')
+                div(class='calculator-result-value') 7 537 руб.
+                button(type='submit' class='button-texture') Рассчитать точнее
+
+            div(class='form-note')
+                != 'Нажимая на кнопку, вы подтверждаете своё согласие с обработкой персональных данных и <a href="#">политикой конфиденциальности</a>'

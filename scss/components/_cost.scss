@@ -1,0 +1,42 @@
+/*********************************************
+*********** cost
+**********************************************/
+
+.cost {
+  background: url(../images/background-blue.jpg) no-repeat center center;
+  background-size: cover;
+  padding: 40px 0;
+
+  h2 {
+    color: #fff;
+  }
+
+  .sub-title {
+    color: #77d8ff;
+    margin: 10px 0 20px;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+  }
+
+}
+
+@media(max-width: 1199px) {
+
+}
+
+@media(max-width: 991px) {
+
+}
+
+@media(max-width: 767px) {
+
+}
+
+@media(max-width: 575px) {
+
+}

@@ -192,6 +192,11 @@ section {
   padding: 60px 0;
 }
 
+fieldset {
+  display: block;
+  border: none;
+}
+
 .button-texture {
   display: flex;
   height: 50px;
@@ -388,6 +393,101 @@ section {
 
 }
 
+.custom-select {
+  position: relative;
+
+  .current-value {
+    display: block;
+    height: 50px;
+    background: #fff;
+    padding: 0 65px 0 25px;
+    border-right: 2px solid $color-green;
+    position: relative;
+    cursor: pointer;
+
+    span {
+      display: flex;
+      align-items: center;
+      height: 50px;
+      line-height: 1;
+      font-weight: 300;
+      font-size: 20px;
+      color: #000;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 50px;
+      background: url(../images/icon-angle-down.png) no-repeat center center;
+      transition: .4s;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    &:hover span {
+      color: $color-green;
+    }
+
+  }
+
+  input {
+    display: none;
+  }
+
+  ul {
+    display: none;
+    width: calc(100% - 62px);
+    background: #fff;
+    padding: 0 15px 0 15px;
+    border-top: 2px solid $color-green;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 1;
+    box-shadow: 5px 5px 10px -5px $color-green;
+
+    li {
+      display: flex;
+      align-items: center;
+      min-height: 35px;
+      padding: 5px 0 5px 10px;
+      border-bottom: 1px solid $color-green;
+      cursor: pointer;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &.active,
+      &:hover {
+        color: $color-green;
+      }
+
+      &.active {
+        cursor: default;
+      }
+
+    }
+
+  }
+
+  &.active {
+
+    ul {
+      display: block;
+    }
+
+    .current-value:after {
+      transform: rotate(180deg);
+    }
+
+  }
+
+}
+
 @media (max-width: 575px) {
 
   h2 {
@@ -396,6 +496,22 @@ section {
 
   .sub-title {
     font-size: 20px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .custom-select {
+
+    .current-value {
+
+      span {
+        font-size: 16px;
+      }
+
+    }
+
   }
 
 }
