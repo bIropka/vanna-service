@@ -1,0 +1,56 @@
+/*********************************************
+*********** questions
+**********************************************/
+
+.questions {
+  background: url(../images/background-questions.jpg) no-repeat center center;
+  background-size: cover;
+  padding: 40px 0;
+
+  h2 {
+    color: #fff;
+  }
+
+  .sub-title {
+    color: #9bb3b3;
+    margin: 10px 0 25px;
+  }
+
+}
+
+.questions-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+  flex-wrap: wrap;
+}
+
+.questions-item {
+  width: 47%;
+  padding: 0 0 20px;
+}
+
+.questions-item-question {
+  font-size: 20px;
+  line-height: 26px;
+  color: $color-green;
+  font-weight: 500;
+  margin: 0 0 10px;
+}
+
+.questions-item-answer {
+  font-size: 20px;
+  line-height: 24px;
+  color: #fff;
+  font-weight: 300;
+}
+
+@media(max-width: 767px) {
+
+  .questions-item {
+    width: 100%;
+    padding: 0 0 30px;
+  }
+
+}
