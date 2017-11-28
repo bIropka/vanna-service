@@ -179,4 +179,59 @@ $(window).ready(function() {
 
     /* ------- */
 
+    /* portfolio */
+
+    $('#slider-large-1').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '#slider-small-1'
+    });
+    $('#slider-small-1').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '#slider-large-1',
+        focusOnSelect: true,
+        appendArrows: '.portfolio-controls',
+        prevArrow: '#portfolio-prev-1',
+        nextArrow: '#portfolio-next-1'
+    });
+
+    $('#slider-large-2').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '#slider-small-2'
+    });
+    $('#slider-small-2').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '#slider-large-2',
+        focusOnSelect: true,
+        appendArrows: '.portfolio-controls',
+        prevArrow: '#portfolio-prev-2',
+        nextArrow: '#portfolio-next-2'
+    });
+
+    $('#slider-large-3').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '#slider-small-3'
+    });
+    $('#slider-small-3').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '#slider-large-3',
+        focusOnSelect: true,
+        appendArrows: '.portfolio-controls',
+        prevArrow: '#portfolio-prev-3',
+        nextArrow: '#portfolio-next-3'
+    });
+
+    /* --------- */
+
 });
