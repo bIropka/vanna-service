@@ -4,6 +4,12 @@ $(window).ready(function() {
         $('.wrapper').animate({opacity: 1}, 500);
     }, 500);
 
+    $('a[href^="#"]').click(function(){
+        var target = $(this).attr('href');
+        $('html, body').animate({scrollTop: $(target).offset().top - 50}, 800);
+        return false;
+    });
+
     if($(window).scrollTop() > 250) {
         $('.header-content .link-phone').insertBefore('.header-top .to-calculator');
     } else {
@@ -162,6 +168,14 @@ $(window).ready(function() {
     /* ----- */
 
     /* reviews */
+
+    $('.slider-reviews').slick({
+        appendArrows: '.reviews-controls',
+        prevArrow: '.reviews-prev',
+        nextArrow: '.reviews-next'
+    });
+
+    $('.reviews-item-data').mCustomScrollbar();
 
     /* ------- */
 
