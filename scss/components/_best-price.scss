@@ -3,14 +3,169 @@
 **********************************************/
 
 .best-price {
+  background: url(../images/background-green-ok.jpg) no-repeat center center;
+  background-size: cover;
+
+  .wrapper-inner {
+    padding: 40px 450px 40px 15px;
+    position: relative;
+  }
+
+  h2 {
+    color: #fff;
+    text-align: left;
+  }
+
+  .sub-title {
+    color: #b1f367;
+    margin: 10px 0 20px;
+    text-align: left;
+  }
+
+  p {
+    font-size: 22px;
+    line-height: 26px;
+    color: #fff;
+    font-weight: 300;
+
+    span {
+      display: block;
+      line-height: inherit;
+      font-size: inherit;
+      font-weight: 500;
+    }
+
+  }
+
+  ul {
+    margin: 30px 0;
+
+    li {
+      display: block;
+      margin: 15px 0;
+      font-size: 15px;
+      color: #fff;
+      position: relative;
+      padding: 0 0 0 25px;
+
+      span {
+        font-weight: 500;
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        width: 4px;
+        height: 4px;
+        border: 6px solid #95d84d;
+        background: #6aab24;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+    }
+
+  }
+
+  .form-note {
+    color: #fff;
+    font-size: 15px;
+    line-height: 24px;
+  }
 
 }
 
-@media(max-width: 1199px) {
+.form-best-price {
+  display: block;
+  width: 350px;
+  background: rgba(0, 0, 0, .87);
+  padding: 40px 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    padding: 0 20px;
+    text-align: center;
+    margin: 0 0 20px;
+  }
+
+  label {
+    width: calc(100% - 100px);
+    margin: 20px auto 15px;
+  }
+
+  .upload-field {
+    display: block;
+    background: #fff;
+    width: calc(100% - 100px);
+    margin: 0 auto;
+    padding: 0 60px 0 25px;
+    height: 50px;
+    cursor: pointer;
+    position: relative;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 50px;
+      background: url(../images/icon-angle-down.png) no-repeat center center;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    span {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      font-size: 20px;
+      font-weight: 300;
+      border-right: 2px solid $color-green;
+    }
+
+    input {
+      display: none;
+    }
+
+    &:hover span {
+      color: $color-green;
+    }
+
+  }
+
+  .button-texture {
+    justify-content: center;
+    margin: 15px auto 0;
+    width: calc(100% - 100px);
+  }
 
 }
 
 @media(max-width: 991px) {
+
+  .best-price {
+
+    .wrapper-inner {
+      padding: 40px 15px;
+    }
+
+  }
+
+  .form-best-price {
+    width: 100%;
+    position: static;
+    margin: 25px 0 0;
+  }
 
 }
 
