@@ -161,4 +161,8 @@ $(window).ready(function() {
 
     /* ----- */
 
+    /* reviews */
+
+    /* ------- */
+
 });

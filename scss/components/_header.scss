@@ -190,6 +190,7 @@ nav {
       padding: 80px 30px;
       overflow: auto;
       transition: .6s;
+      z-index: 100;
 
       ul {
         display: flex;
