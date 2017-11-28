@@ -3,10 +3,71 @@
 **********************************************/
 
 .years {
+  background: url(../images/background-texture.jpg) no-repeat center top;
+  padding: 40px 0;
+
+  h2 {
+    color: $color-blue;
+  }
+
+  .sub-title {
+    font-weight: 300;
+    margin: 10px 0 35px;
+  }
+
+  p {
+    text-align: center;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 300;
+    margin: 25px 0 0;
+  }
 
 }
 
+.years-list {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.years-item {
+  position: relative;
+  border-right: 1px solid #ededed;
+
+  &:last-of-type {
+    border-right: none;
+  }
+
+}
+
+.years-item-text {
+  display: block;
+  width: 64px;
+  height: 33px;
+  line-height: 33px;
+  background: $color-green;
+  color: #fff;
+  text-align: center;
+  font-size: 17px;
+  position: absolute;
+  left: 22px;
+  bottom: calc(100% - 22px);
+}
+
+.years-item-image {
+  display: block;
+  width: 290px;
+  height: 290px;
+  overflow: hidden;
+  border: 22px solid #fff;
+}
+
 @media(max-width: 1199px) {
+
+  .years-list {
+    flex-wrap: wrap;
+  }
 
 }
 
