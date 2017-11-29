@@ -209,6 +209,7 @@ fieldset {
     color: #fff;
     text-transform: uppercase;
     font-size: 17px;
+    line-height: 50px;
     font-weight: 500;
   }
 
@@ -451,6 +452,7 @@ fieldset {
 
     li {
       display: flex;
+      list-style: none;
       align-items: center;
       min-height: 35px;
       padding: 5px 0 5px 10px;
