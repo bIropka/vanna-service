@@ -223,11 +223,27 @@
   ul {
 
     li {
-      margin: 20px 0;
+      display: block;
+      margin: 18px 0;
       font-size: 15px;
       line-height: 18px;
       font-weight: 300;
       position: relative;
+      padding: 0 0 0 30px;
+
+      &:before {
+        content: '';
+        display: block;
+        width: 6px;
+        height: 6px;
+        background: #fff;
+        border: 7px solid #a1c779;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        top: -2px;
+      }
+
     }
 
   }
@@ -241,21 +257,149 @@
 }
 
 .portfolio-item-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   width: 100%;
+  padding: 20px 35px 20px 15px;
+  background: $color-green;
+
+  .button-texture {
+    height: 70px;
+    align-items: center;
+    padding: 0 30px;
+    background-size: cover;
+
+    img {
+      width: 30px;
+      position: relative;
+      top: -3px;
+    }
+
+    span {
+      font-size: 17px;
+      margin: 0 0 0 10px;
+    }
+
+  }
+
+}
+
+.portfolio-item-fact {
+  font-size: 17px;
+  line-height: 18px;
+  color: #fff;
+  margin: 0 20px;
+
+  span {
+    display: block;
+    font-size: 32px;
+    line-height: 22px;
+    color: #a8ee5e;
+    font-weight: 300;
+    white-space: nowrap;
+    margin: 0 0 10px 0;
+  }
+
 }
 
 @media(max-width: 1199px) {
+
+  .portfolio {
+    background-size: cover;
+
+  }
+
+  .portfolio-item-fact {
+
+    span {
+      font-size: 24px;
+    }
+
+  }
 
 }
 
 @media(max-width: 991px) {
 
+  .portfolio-item {
+    display: block;
+    width: 530px;
+    margin: 0 auto 40px;
+
+    &:last-of-type {
+      margin: 0 auto;
+    }
+
+  }
+
+  .portfolio-item-right {
+    width: 100%;
+  }
+
+  .portfolio-item-footer {
+    flex-wrap: wrap;
+
+    .button-texture {
+      margin: 25px auto 0;
+    }
+
+  }
+
+  .portfolio-item-fact {
+    width: 40%;
+    margin: 10px 5px;
+  }
+
+  .portfolio-item-right ul li {
+    padding: 0 30px;
+  }
+
 }
 
-@media(max-width: 767px) {
+@media(max-width: 560px) {
 
-}
+  .portfolio-item {
+    width: 290px;
+  }
 
-@media(max-width: 575px) {
+  .portfolio-item-fact {
+    font-size: 14px;
+    line-height: 16px;
+    margin: 10px;
+
+    span {
+      font-size: 20px;
+      line-height: 15px;
+      margin: 0 0 5px 0;
+    }
+
+  }
+
+  .portfolio-item-left {
+    width: 290px;
+
+    &:after {
+      display: none;
+    }
+
+  }
+
+  .portfolio-large-image {
+    height: 230px;
+  }
+
+  .portfolio-item-data {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px 25px;
+    background: rgba(0, 0, 0, 1);
+    position: static;
+  }
+
+  .portfolio-item-address {
+    text-align: center;
+    margin: 10px 0 0;
+  }
 
 }

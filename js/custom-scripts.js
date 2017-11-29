@@ -67,6 +67,24 @@ $(window).ready(function() {
         $('.header-top nav').toggleClass('active');
     });
 
+    $('.to-callback').click(function() {
+        $('.modal-callback').fadeIn().css('display', 'flex');
+    });
+
+    $('.modal').click(function (event) {
+
+        var target = $(event.target);
+
+        if (!target.closest($('.modal-inner')).length) {
+            $('.modal').fadeOut();
+        }
+
+    });
+
+    $('.close-modal').click(function() {
+        $(this).parents('.modal').fadeOut();
+    });
+
     /* custom select */
 
     $('.custom-select .current-value').click(function() {
@@ -172,7 +190,8 @@ $(window).ready(function() {
     $('.slider-reviews').slick({
         appendArrows: '.reviews-controls',
         prevArrow: '.reviews-prev',
-        nextArrow: '.reviews-next'
+        nextArrow: '.reviews-next',
+        dots: true
     });
 
     $('.reviews-item-data').mCustomScrollbar();
@@ -195,7 +214,15 @@ $(window).ready(function() {
         focusOnSelect: true,
         appendArrows: '.portfolio-controls',
         prevArrow: '#portfolio-prev-1',
-        nextArrow: '#portfolio-next-1'
+        nextArrow: '#portfolio-next-1',
+        responsive: [
+            {
+                breakpoint: 561,
+                settings: {
+                    slidesToShow: 2
+                }
+            }
+        ]
     });
 
     $('#slider-large-2').slick({
@@ -212,7 +239,15 @@ $(window).ready(function() {
         focusOnSelect: true,
         appendArrows: '.portfolio-controls',
         prevArrow: '#portfolio-prev-2',
-        nextArrow: '#portfolio-next-2'
+        nextArrow: '#portfolio-next-2',
+        responsive: [
+            {
+                breakpoint: 561,
+                settings: {
+                    slidesToShow: 2
+                }
+            }
+        ]
     });
 
     $('#slider-large-3').slick({
@@ -229,7 +264,15 @@ $(window).ready(function() {
         focusOnSelect: true,
         appendArrows: '.portfolio-controls',
         prevArrow: '#portfolio-prev-3',
-        nextArrow: '#portfolio-next-3'
+        nextArrow: '#portfolio-next-3',
+        responsive: [
+            {
+                breakpoint: 561,
+                settings: {
+                    slidesToShow: 2
+                }
+            }
+        ]
     });
 
     /* --------- */

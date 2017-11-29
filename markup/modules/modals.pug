@@ -1,0 +1,27 @@
+div(class='modal modal-callback')
+    form(action='#' class='modal-inner')
+        div(class='close-modal')
+            i(class='fa fa-close')
+        h2
+            !='Укажите ваш актуальный телефон, <strong>и мы свяжемся с вами в течение 15 минут</strong>'
+        label
+            input(type='text' placeholder='Ваше имя')
+            i(class='fa fa-user')
+        label
+            input(type='tel' placeholder='Ваш телефон')
+            i(class='fa fa-phone')
+        button(type='submit' class='button-texture')
+            span Оставить заявку
+        div(class='form-note')
+            != 'Нажимая на кнопку, вы подтверждаете своё согласие с обработкой персональных данных и <a href="#">политикой конфиденциальности</a>'
+
+div(class='modal modal-thanks')
+    form(action='#' class='modal-inner')
+        div(class='close-modal')
+            i(class='fa fa-close')
+        h2
+            !='Спасибо, ваша <strong>заявка отправлена!</strong>'
+        p Долго ждать?
+        p
+            span Наберите нас прямо сейчас:
+        a(href='tel:+000000000000') + 0 (000) 000 00 000
