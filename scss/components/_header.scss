@@ -71,7 +71,33 @@ nav {
         color: #53656c;
 
         &.active {
-        color: #000;
+          color: #000;
+          position: relative;
+
+          &:before {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 8px;
+            background: $color-green;
+            border-radius: 50%;
+            position: absolute;
+            top: -15px;
+            right: 15px;
+          }
+
+          &:after {
+            content: '';
+            display: block;
+            width: 16px;
+            height: 16px;
+            background: $color-green;
+            border-radius: 50%;
+            position: absolute;
+            top: -32px;
+            right: 30px;
+          }
+
       }
 
         &:not(.active):hover {
@@ -198,6 +224,23 @@ nav {
 
         li {
           margin: 0 0 15px;
+
+          a.active {
+
+            &:after {
+              display: none;
+            }
+
+            &:before {
+              top: 0;
+              bottom: 0;
+              margin: auto;
+              right: auto;
+              left: -14px;
+            }
+
+          }
+
         }
 
       }

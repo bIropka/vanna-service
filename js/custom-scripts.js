@@ -196,6 +196,15 @@ $(window).ready(function() {
 
     $('.reviews-item-data').mCustomScrollbar();
 
+    $('.reviews-filter-item').click(function() {
+
+        if(!$(this).hasClass('active')) {
+            $(this).siblings().removeClass('active');
+            $(this).addClass('active');
+        }
+
+    });
+
     /* ------- */
 
     /* portfolio */
